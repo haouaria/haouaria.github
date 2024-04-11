@@ -1,0 +1,82 @@
+/*
+ * ----------------------------------------
+ * Loader
+ * ----------------------------------------
+ */
+.loader {
+    &__styled p {
+        font-family:'Shrikhand', sans-serif;
+        font-size: large;
+    }
+}
+/*
+ * ----------------------------------------
+ * Homepage & Other Pages
+ * ----------------------------------------
+ */
+body {
+    margin: auto;
+    font-size: 16px;
+}
+a {
+    color: $black;
+    text-decoration: none;
+}
+a:visited {
+    color: $black;
+}
+.endpage__about a {
+    color: white;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+p {
+    font-size: 17px;
+}
+.endpage {
+    &__title {
+         /*
+         * ----------------------------------------
+         * Responsive mode desktop
+         * ----------------------------------------
+         */
+         @include desktop-only {
+            display: flex;
+            position: absolute;
+            justify-content: end;
+            right: 5%;
+            margin-top: 35px;
+        } 
+        /*
+        * ----------------------------------------
+        */      
+        & p {
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 18px;
+            color: $white;
+        }
+    }
+}
+/*
+ * ----------------------------------------
+ * Other Pages
+ * ----------------------------------------
+ */
+.menu {
+    &__title h1 {
+        font-family: 'Shrikhand', sans-serif;
+    }
+    &__space h2 {
+        @include settings__menu__space;
+    }
+    &__choice p {
+        font-size: 15px;     
+    }
+}

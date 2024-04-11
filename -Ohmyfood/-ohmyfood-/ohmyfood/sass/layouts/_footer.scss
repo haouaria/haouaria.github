@@ -1,0 +1,72 @@
+/*
+ * ----------------------------------------
+ * Homepage & Other Pages
+ * ----------------------------------------
+ */
+.endpage {
+    height: 197px;
+    background-color: $footer;
+    padding-top: 22px;
+    padding-left: 5%;
+    /*
+    * ----------------------------------------
+    * Responsive mode desktop
+    * ----------------------------------------
+    */
+    @include desktop-only {
+        height: 115px;
+        position: relative;
+    } 
+    /*
+    * ----------------------------------------
+    */     
+    &__about {
+        color: $white;
+        a:visited {
+            color: $white;
+        }
+    }
+    ul {
+        padding-top: 9px;
+        padding-inline-start: initial;
+        /*
+        * ----------------------------------------
+        * Responsive mode desktop
+        * ----------------------------------------
+        */
+        @include desktop-only {
+            display: flex;
+            gap: 15px;
+            justify-content: end;
+            margin-right: 22%;
+            margin-top: 23px;
+        } 
+    }
+    li {
+        display: flex;
+        padding-top: 7px;
+        }
+        .icon__one {
+            i {
+                width: 24px;
+                padding-right: 10px;
+            }
+        }
+        .icon__two {
+            /*
+            * ----------------------------------------
+            * Responsive mode desktop
+            * ----------------------------------------
+            */
+            @include desktop-only {
+                padding-right: 40px;
+            } 
+            /*
+            * ----------------------------------------
+            */ 
+            i {
+                width: 24px;
+                padding-right: 10px;
+            }
+        }
+}

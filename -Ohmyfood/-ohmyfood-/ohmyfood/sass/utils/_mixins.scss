@@ -1,0 +1,78 @@
+/*
+ * ----------------------------------------
+ * Homepage & Other Pages
+ * ----------------------------------------
+ */
+ @mixin settings__btn {
+    width: 49%;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 25px;
+    background:linear-gradient(to top, $primary, $secondary);
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    cursor: pointer;
+    /*
+    * ----------------------------------------
+    * Responsive mode desktop
+    * ----------------------------------------
+    */
+    @include desktop-only {
+        width: 20%;
+    }
+    
+}
+/*
+ * ----------------------------------------
+ * Other Pages
+ * ----------------------------------------
+ */
+@mixin settings__menu__container {
+    background-color: $greylight;
+    border-radius: 40px 40px 0px 0px;
+    position: relative;
+    /*
+    * ----------------------------------------
+    * Responsive mode desktop
+    * ----------------------------------------
+    */
+    @include desktop-only {
+        width: 74%;
+        position: relative;
+        margin-left: 13%;
+        bottom: 30px;
+    }
+}
+@mixin settings__menu__space {
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 42px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid;
+    border-color: $neongreen;
+    width: 40px;
+}
+@mixin settings__menu__choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 96%;
+    height: 70px;
+    margin-top: 10px;
+    background: $white;
+    border-radius: 15px;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+}
+/*
+ * ----------------------------------------
+ * Responsive mode only
+ * ----------------------------------------
+ */
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoint, desktop)){
+        @content;
+    }       
+}

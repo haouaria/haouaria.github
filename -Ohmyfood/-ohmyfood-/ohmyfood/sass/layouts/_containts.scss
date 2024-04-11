@@ -1,0 +1,229 @@
+/*
+ * ----------------------------------------
+ * Homepage
+ * ----------------------------------------
+ */
+.reservation {
+    &__title {
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 40px;
+    }
+    &__about {
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+.functioning {
+    &__title {
+        margin-top: 48px;
+         /*
+         * ----------------------------------------
+         * Responsive mode desktop
+         * ----------------------------------------
+         */
+         @include desktop-only {
+            padding-left: 11%;
+        }
+    }
+    &__step {
+        display: flex;
+        flex-direction: column;
+        /*
+         * ----------------------------------------
+         * Responsive mode desktop
+         * ----------------------------------------
+         */
+        @include desktop-only {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+.restaurants {
+    &__title {
+        padding-top: 55px;
+        /*
+         * ----------------------------------------
+         * Responsive mode desktop
+         * ----------------------------------------
+         */
+         @include desktop-only {
+            padding-left: 11%;
+        }
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        /*
+         * ----------------------------------------
+         * Responsive mode desktop
+         * ----------------------------------------
+         */
+         @include desktop-only {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 7%;
+            justify-content: center;
+            padding-left: 4%;
+        }
+    }   
+}
+/*
+ * ----------------------------------------
+ * Other Pages
+ * ----------------------------------------
+ */
+.menu {
+    &__background {
+        @include desktop-only {
+            background-color: $white;
+            position: relative;
+            z-index: 0;
+            top: 30px;
+        }
+    }
+    &__title {      
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    }
+    &__space {
+        padding-left: 4%;
+         /*
+         * ----------------------------------------
+         * Responsive mode desktop
+         * ----------------------------------------
+         */
+         @include desktop-only {
+            margin-left: 17%;
+        }
+    }
+    &__like {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        padding-left: 25px;
+    }
+    &_info .h3 {
+      width: 267px;
+      height: 20px;
+      top:190px;
+      left:13px;
+      gap:50px;
+    }
+    &__text {
+        display: flex;
+        padding: 10px;
+        min-width: 70%;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        & h3, p {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; 
+            
+        }
+    }
+    &__right {
+        max-width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+    }
+    &__price {
+        width: 50%;
+        background-color: white;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 15px;
+        transform: translate(100%, 0);
+        transition: transform 1000ms;
+    }
+    &__choice {
+        @include settings__menu__choice;
+        transition: transform 330ms ease-in-out;
+        /*
+         * ----------------------------------------
+         * Responsive mode desktop
+         * ----------------------------------------
+         */
+         @include desktop-only {
+            width: 75%;
+        }
+        /*
+        * ----------------------------------------
+        */
+        &:hover .menu__price {
+            transform: translate(0%, 0);
+            transition: transform 1000ms;
+        }
+        &:hover .box {
+            transform: translate(0%, 0);
+            transition: transform 1000ms;
+            i {
+                transform: rotate(-1turn);
+                transition: transform 1000ms ease-in-out;
+            }
+        }
+    }
+    /*
+    * ----------------------------------------
+    * Responsive mode desktop
+    * ----------------------------------------
+    */
+    &__delay{
+        &__one {
+                animation-duration: 3s;
+                animation-name: glissement;
+                animation-delay: 0.5s;
+        }
+        &__two {
+                animation-duration: 3s;
+                animation-name: glissement;
+                animation-delay: 0.7s;
+        }
+        &__three {
+                animation-duration: 3s;
+                animation-name: glissement;
+                animation-delay: 0.9s;           
+        }
+    }
+}
+.box {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 15px 15px 0px;
+    background: #99E2D0;
+    position: relative;
+    transform: translate(110%, 0);
+    transition: transform 1000ms;
+}
+.fa-circle-check {
+    color: white;
+    font-size: 22px;
+}
+@keyframes glissement {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}

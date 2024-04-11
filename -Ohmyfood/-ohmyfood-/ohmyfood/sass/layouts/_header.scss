@@ -1,0 +1,31 @@
+/*
+ * ----------------------------------------
+ * Homepage & Other Pages
+ * ----------------------------------------
+ */
+.homepage {
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    z-index: 1;   
+    .logo_omf_top {
+        width: 162px;
+        height: 44px;
+    }
+}
+/*
+ * ----------------------------------------
+ * Other Pages
+ * ----------------------------------------
+ */
+.back {
+    .fa-arrow-left {
+        position: absolute;
+        left: 6%;
+        top: 23px;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,40 @@
+/*
+ * ----------------------------------------
+ * Homepage & Other Pages
+ * ----------------------------------------
+ */
+.btn {
+    display: flex;
+    justify-content: center;
+    &__mainstyled {
+        @include settings__btn;
+        &:active {
+            background:linear-gradient(to top, $primary, $secondary);
+            opacity: 0.9;
+        }
+    }
+}
+/*
+ * ----------------------------------------
+ * Button like
+ * ----------------------------------------
+ */
+.empty-heart {
+    position: absolute;
+    visibility: visible;
+    cursor: pointer;
+    &:active {
+        visibility: hidden;
+    }
+}
+.anim-heart {
+    color: $secondary;
+    opacity: 0;
+    cursor: pointer;
+    &:active {
+        transform: scale(1.1);
+        transition: transform 200ms;
+        visibility: visible;
+        opacity: 1;
+    }
+}

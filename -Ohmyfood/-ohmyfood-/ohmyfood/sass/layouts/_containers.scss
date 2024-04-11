@@ -1,0 +1,88 @@
+/*
+ * ----------------------------------------
+ * Loader
+ * ----------------------------------------
+ */
+ .loader__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    height: 100%;
+    animation: hide 1s linear 2s 1 normal forwards;
+}
+/*
+ * ----------------------------------------
+ * Homepage
+ * ----------------------------------------
+ */
+.location {
+    &__container {
+        background-color: $grey;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+        & p {
+            font-size: 16px;
+            margin-left: 15px;
+        }
+    }
+}
+.reservation {
+    &__container {
+        height: 285px;
+        background-color: $greylight;
+    }
+}
+.functioning {
+    &__container {
+        height: 440px;
+        padding-left: 5%;
+        /*
+        * ----------------------------------------
+        * Responsive mode desktop
+        * ----------------------------------------
+        */
+        @include desktop-only {
+            height: 180px;
+            padding-left: 0%;
+        }
+    }
+}
+.restaurants {
+    &__container {
+    height: 1225px;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: $greylight;
+        /*
+        * ----------------------------------------
+        * Responsive mode desktop
+        * ----------------------------------------
+        */
+        @include desktop-only {
+            height: 700px;
+            padding-left: 0%;
+        }
+    }
+}
+/*
+ * ----------------------------------------
+ * Other Pages
+ * ----------------------------------------
+ */
+.menu {
+    &__container {
+        @include settings__menu__container;
+        height: 1115px;
+    }
+    &__highcontainer {
+        @include settings__menu__container;
+        height: 1200px;
+    }
+}
+

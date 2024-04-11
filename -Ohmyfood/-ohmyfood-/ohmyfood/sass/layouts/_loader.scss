@@ -1,0 +1,78 @@
+/*
+ * ----------------------------------------
+ * styled Loader
+ * ----------------------------------------
+ */
+.loader__styled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: $greylight;
+    animation: loader__styled 3s ease-in-out 1s infinite forwards;
+    
+}
+/*
+ * ----------------------------------------
+ * animation Loader
+ * ----------------------------------------
+ */
+ @keyframes loader__styled {
+  /* UNE FOIS */
+  0% {   
+      opacity: 1;
+  }
+  10% {
+      opacity: 0.9;
+  }
+  20% {
+      letter-spacing: 1em;      
+      opacity: 0.8;
+  }
+  30% { 
+      opacity: 0.7;
+  }
+  40% {
+    letter-spacing: 1em;
+      opacity: 0.6;
+  }
+  50% { 
+      opacity: 0.5;
+  }
+  60% {
+    letter-spacing: 1em;
+      opacity: 0.4;
+  }
+  70% {
+      letter-spacing: 1em;
+      opacity: 0.3;
+  }
+  80% {
+    letter-spacing: 1em;
+    opacity: 0.2;
+  }
+  90% {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+  }
+  /* FIN */
+  100% {     
+      opacity: 0;
+      width: 0%;
+      height: 0%;
+  }
+}
+@keyframes hide {
+  0% { opacity: 1; }
+  100% { opacity: 0; z-index: -999;}
+}
+body {
+  animation: disable-scroll 3000ms;
+}
+@keyframes disable-scroll {
+  0% { overflow: hidden; height: 100%;} 
+  99% { overflow: hidden; height: 100%;}
+  100% { overflow: visible; height: auto;}
+}

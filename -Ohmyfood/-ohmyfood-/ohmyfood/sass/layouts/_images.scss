@@ -1,0 +1,34 @@
+/*
+ * ----------------------------------------
+ * Homepage
+ * ----------------------------------------
+ */
+.card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+/*
+ * ----------------------------------------
+ * Other Pages
+ * ----------------------------------------
+ */
+.background {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    .img {
+        width: 100%;
+        height: 275px;
+        /*
+         * ----------------------------------------
+         * Responsive mode desktop
+         * ----------------------------------------
+         */
+         @include desktop-only {
+            height: 956px;
+            position: relative;
+            bottom: 420px;
+        }
+    }
+}
